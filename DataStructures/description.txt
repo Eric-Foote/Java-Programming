@@ -1,0 +1,1 @@
+This folder will contain my workings through the datastructures textbook and my java introduction textbook
