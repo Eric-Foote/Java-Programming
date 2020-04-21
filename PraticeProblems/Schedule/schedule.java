@@ -23,7 +23,15 @@ public class schedule {
         String level8 = "4000";
         String level9 = "1000";
         System.out.println("+---------------------------------------------------------------+");
-        
+        System.out.println("| 1 | \t" + class1 + "\t\t| \t" + level1 + "\t\t|");
+        System.out.println("| 2 | \t" + class2 + "\t\t\t| \t" + level2 + "\t\t|");
+        System.out.println("| 3 | \t" + class3 + "\t\t\t\t| \t" + level3 + "\t\t|");
+        System.out.println("| 4 | \t" + class4 + "\t\t\t\t| \t" + level4 + "\t\t|");
+        System.out.println("| 5 | \t" + class5 + " | \t" + level5 + "\t\t|");
+        System.out.println("| 6 | \t" + class6 + "\t\t| \t" + level6 + "\t\t|");
+        System.out.println("| 7 | \t" + class7 + "\t\t| \t" + level7 + "\t\t|");
+        System.out.println("| 8 | \t" + class8 + "\t\t| \t" + level8 + "\t\t|");
+        System.out.println("| 9 | \t" + class9 + " | \t" + level9 + "\t\t|");
         System.out.println("+---------------------------------------------------------------+");
     }
 }   
