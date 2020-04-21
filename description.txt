@@ -1,0 +1,1 @@
+This folder is going to contain code that is examples given in exercises or from various sources
