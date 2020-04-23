@@ -9,14 +9,11 @@ public class aNumberGuessingGame {
         System.out.println("I am thinking of a number from 1 to 10");
         System.out.println("Your guess");
         guess = scan.nextInt();
-        if (guess == x)
-        {
-            System.out.println("You are correct your guess was what I was thinking of " + x);
+        while(guess != x){
+            System.out.println("That is incorrect. Guess again");
+            System.out.println("Your guess");
+            guess = scan.nextInt();
         }
-        else
-        {
-            System.out.println("Sorry, but I was thinking of " + x);
-        }
-
+        System.out.println("You are correct your guess was what I was thinking of " + x);
     }
 }
