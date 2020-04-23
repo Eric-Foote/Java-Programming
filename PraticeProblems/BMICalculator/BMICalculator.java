@@ -6,19 +6,40 @@
 import java.util.Scanner;
 public class BMICalculator {
     
-    public static double feetToMeters(double feet)
+    public static double feetToMeters(double feet) //this method is a little beyond the current scope of the pratice lessons but I decided to put it here for simplicity
     {
         double conversion;
         conversion = feet / 3.28;
         return conversion;
     }
 
-    public static double poundsToKilograms(double pounds)
+    public static double poundsToKilograms(double pounds) //this method is a little beyond the current scope of the pratice lessons but I decided to put it here for simplicity
     {
         double conversion;
         conversion = pounds / 2.20;
         return conversion;
     }
+
+    public static void BMICategories(double BMI)
+    {
+        if(BMI < 18.5)
+        {
+            System.out.println("BMI Category: underweight");
+        }
+        if(BMI >= 18.5 && BMI < 24.9)
+        {
+            System.out.println("BMI Category: normal weight");
+        }
+        if(BMI >= 25 && BMI < 29.9)
+        {
+            System.out.println("BMI Category: overweight"); 
+        }
+        if(BMI >= 30.0)
+        {
+            System.out.println("BMI Category: obese");
+        }
+    }
+    // we can add in additional categories at a later time as a bonus all this is going to do is break down the top case and the bottom case and add a later on bottom case
 
     public static void main(String[] args) 
     {
@@ -36,6 +57,7 @@ public class BMICalculator {
             weight = scan.nextDouble();
             BMI = weight / height;
             System.out.println("Your BMI is " + BMI);
+            BMICategories(BMI);
         }
         if(choice == 2){
             System.out.println("Your height in feet input as feet.inches: ");
@@ -46,10 +68,10 @@ public class BMICalculator {
             weight = poundsToKilograms(weight);
             BMI = weight / height;
             System.out.println("Your BMI is " + BMI);
+            BMICategories(BMI);
         }
         if(choice > 2){
             System.out.println("1 or 2");
         }
-        // We are going to return to this later to do some additional work with if statements
     }
 }
