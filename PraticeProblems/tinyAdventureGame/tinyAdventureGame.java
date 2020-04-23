@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import javax.lang.model.util.ElementScanner6;
 public class tinyAdventureGame {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -54,7 +56,48 @@ public class tinyAdventureGame {
         }
         else if(firstChoice.equals("kitchen"))
         {
+            System.out.println("There is a long countertop with dirty dishes everywhere. Off to one side there is, as you'd expect a refridgerator. You may open the \"refridgerator\" or look in a \"cabinet.\"");
+            secondChoice = scan.next();
+            if(secondChoice.equals("refridgerator"))
+            {
+                System.out.println("Inside the refrigerator you see food and stuff. It looks pretty nasty. Would you like to eat some of the food? (\"yes\" or \"no\")");
+                thirdChoice = scan.next();
+                if(thirdChoice.equals("yes"))
+                {
+                    System.out.println("Ehhhh it tasted better then you expected");
+                }
+                else if(thirdChoice.equals("no"))
+                {
+                    System.out.println("I guess you will never know how it tasted");
+                }
+                else 
+                {
+                    System.out.println("I guess you will never know how it tasted");
+                }
+            }
+            else if(secondChoice.equals("cabinet"))
+            {
+                System.out.println("Inside the cabinet you see food and stuff. It looks pretty nasty. Would you like to eat some of the food? (\"yes\" or \"no\")");
+                thirdChoice = scan.next();
+                if(thirdChoice.equals("yes"))
+                {
+                    System.out.println("Ehhhh it tasted better then you expected");
 
+                }
+                else if(thirdChoice.equals("no"))
+                {   
+                    System.out.println("I guess you will never know how it tasted");
+
+                }
+                else 
+                {
+                    System.out.println("I guess you will never know how it tasted");
+                }
+            }
+            else 
+            {
+                System.out.println("Has to be either refridgerator or cabinet")
+            }
         }
         else 
         {
