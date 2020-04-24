@@ -10,6 +10,16 @@ public class nim {
         int a = 1 + r.nextInt(pileSize); // this can be changed to be whatever size the user decides it to be 
         int b = 1 + r.nextInt(pileSize);
         int c = 1 + r.nextInt(pileSize);
+        System.out.println("Which graphics option would you like:");
+        System.out.println("Option 1: No graphics all text based");
+        System.out.println("Option 2: Horizontal letters's ");
+        System.out.println("Option 3: Vertical letter's ");
+        int graphicsOption = scan.nextInt();
+        while(graphicsOption != 1 && graphicsOption != 2 && graphicsOption != 3)
+        {
+            System.out.println("Has to be either 1, 2, 3");
+            graphicsOption = scan.nextInt();
+        }
         System.out.println("We will now randomly decide who is player 1 and who is player 2");
         System.out.print("Person 1: enter your name: ");
         String person1 = scan.next();
@@ -35,20 +45,40 @@ public class nim {
         String move;
         while(a != 0 || b != 0 || c != 0)
         {
-            System.out.println("A: " + a + "\tB: " + b + "\tC: " + c);
-            for(int i = 0; i < a; i++)
+            if(graphicsOption == 1)
             {
-                System.out.println("*");
+                System.out.println("A: " + a + "\tB: " + b + "\tC: " + c);
             }
-            for(int i = 0; i < b; i++)
+            if(graphicsOption == 2)
             {
-                System.out.println("    *");
+                for(int i = 0; i < a; i++)
+                {
+                    System.out.print("A");
+                }
+                for(int i = 0; i < b; i++)
+                {
+                    System.out.print("B");
+                }
+                for(int i = 0; i < c; i++)
+                {
+                    System.out.print("C");
+                }
             }
-            for(int i = 0; i < c; i++)
+            if(graphicsOption == 3)
             {
-                System.out.println("      *");
+                for(int i = 0; i < a; i++)
+                {
+                    System.out.println("A");
+                }
+                for(int i = 0; i < b; i++)
+                {
+                    System.out.println("    B");
+                }
+                for(int i = 0; i < c; i++)
+                {
+                    System.out.println("      C");
+                }
             }
- 
             if(turnNumber % 2 == 0)
             {
                 System.out.println(player2 + " choose a pile: ");
