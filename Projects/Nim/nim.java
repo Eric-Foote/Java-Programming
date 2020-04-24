@@ -5,13 +5,31 @@ public class nim {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Random r = new Random();
-        int a = 1 + r.nextInt(5); // we are first going to get the logic down when we have piles of size 5 
-        int b = 1 + r.nextInt(5);
-        int c = 1 + r.nextInt(5);
-        System.out.print("Player 1: enter your name: ");
-        String player1 = scan.next();
-        System.out.print("Player 2: enter your name: ");
-        String player2 = scan.next();
+        System.out.println("How big would you like the possible size of the piles to be: ");
+        int pileSize = scan.nextInt();
+        int a = 1 + r.nextInt(pileSize); // this can be changed to be whatever size the user decides it to be 
+        int b = 1 + r.nextInt(pileSize);
+        int c = 1 + r.nextInt(pileSize);
+        System.out.println("We will now randomly decide who is player 1 and who is player 2");
+        System.out.print("Person 1: enter your name: ");
+        String person1 = scan.next();
+        System.out.print("Person 2: enter your name: ");
+        String person2 = scan.next();
+        String player1;
+        String player2;
+        int decider = 1 + r.nextInt(2);
+        if(decider == 1)
+        {
+             player1 = person1;
+             System.out.println(player1 + " You are player 1"); 
+             player2 = person2;
+        }
+        else
+        {
+            player1 = person2;
+            System.out.println(player1 + " You are player 1");
+            player2 = person1;
+        }
         int turnNumber = 1;
         int amountToRemove = 0;
         String move;
