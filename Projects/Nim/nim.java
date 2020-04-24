@@ -14,22 +14,64 @@ public class nim {
         String player2 = scan.next();
         int turnNumber = 1;
         int amountToRemove = 0;
-        System.out.println("A: " + a + "\tB: " + b + "\tC: " + c);
         String move;
-        while(a != 0 && b != 0 && c != 0)
+        while(a != 0 || b != 0 || c != 0)
         {
+            System.out.println("A: " + a + "\tB: " + b + "\tC: " + c);
             if(turnNumber % 2 == 0)
             {
-                System.out.println(player2 + "choose a pile: ");
+                System.out.println(player2 + " choose a pile: ");
                 move = scan.next();
+                if(move.equals("a"))
+                {
+                    System.out.println("How much to remove from pile A: ");
+                    amountToRemove = scan.nextInt();
+                    a = a - amountToRemove;
+                }
+                else if(move.equals("b"))
+                {
+                    System.out.println("How much to remove from pile B: ");
+                    amountToRemove = scan.nextInt();
+                    b = b - amountToRemove;
+                }
+                else if(move.equals("c"))
+                {
+                    System.out.println("How much to remove from pile C: ");
+                    amountToRemove = scan.nextInt();
+                    c = c - amountToRemove;
+                }
                 turnNumber++;
             }
             else
             {
-                System.out.println(player1 + "choose a pile: ");
+                System.out.println(player1 + " choose a pile: ");
                 move = scan.next();
+                if(move.equals("a"))
+                {
+                    System.out.println("How much to remove from pile A: ");
+                    amountToRemove = scan.nextInt();
+                    a = a - amountToRemove;
+                }
+                else if(move.equals("b"))
+                {
+                    System.out.println("How much to remove from pile B: ");
+                    amountToRemove = scan.nextInt();
+                    b = b - amountToRemove;
+                }
+                else if(move.equals("c"))
+                {
+                    System.out.println("How much to remove from pile C: ");
+                    amountToRemove = scan.nextInt();
+                    c = c - amountToRemove;
+                }
                 turnNumber++; 
+            
             }
         }
+    if(turnNumber % 2 == 0){
+        System.out.println(player2 + " there is no counters left so you win");
+    }
+    else
+        System.out.println(player1 + " there is no counters left so you win");
     }
 }
