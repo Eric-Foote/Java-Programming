@@ -41,18 +41,48 @@ public class nim {
                 {
                     System.out.println("How much to remove from pile A: ");
                     amountToRemove = scan.nextInt();
+                    while(amountToRemove < 0)
+                    {
+                        System.out.println("We can't put any back.... now how many to remove from pile A: ");
+                        amountToRemove = scan.nextInt();
+                    }
+                    while(a - amountToRemove < 0)
+                    {
+                        System.out.println("Can't take more then we have.... now how many to remove from pile A: ");
+                        amountToRemove = scan.nextInt();
+                    }
                     a = a - amountToRemove;
                 }
                 else if(move.equals("b"))
                 {
                     System.out.println("How much to remove from pile B: ");
                     amountToRemove = scan.nextInt();
+                    while(amountToRemove < 0)
+                    {
+                        System.out.println("We can't put any back.... now how many to remove from pile B: ");
+                        amountToRemove = scan.nextInt();
+                    }
+                    while(b - amountToRemove < 0)
+                    {
+                        System.out.println("Can't take more then we have.... now how many to remove from pile B: ");
+                        amountToRemove = scan.nextInt();
+                    }
                     b = b - amountToRemove;
                 }
                 else if(move.equals("c"))
                 {
                     System.out.println("How much to remove from pile C: ");
                     amountToRemove = scan.nextInt();
+                    while(amountToRemove < 0)
+                    {
+                        System.out.println("We can't put any back.... now how many to remove from pile C: ");
+                        amountToRemove = scan.nextInt();
+                    }
+                    while(c - amountToRemove < 0)
+                    {
+                        System.out.println("Can't take more then we have.... now how many to remove from pile C: ");
+                        amountToRemove = scan.nextInt();
+                    }
                     c = c - amountToRemove;
                 }
                 turnNumber++;
@@ -80,18 +110,48 @@ public class nim {
                 {
                     System.out.println("How much to remove from pile A: ");
                     amountToRemove = scan.nextInt();
+                    while(amountToRemove < 0)
+                    {
+                        System.out.println("We can't put any back.... now how many to remove from pile A: ");
+                        amountToRemove = scan.nextInt();
+                    }
+                    while(a - amountToRemove < 0)
+                    {
+                        System.out.println("Can't take more then we have.... now how many to remove from pile A: ");
+                        amountToRemove = scan.nextInt();
+                    }
                     a = a - amountToRemove;
                 }
                 else if(move.equals("b"))
                 {
                     System.out.println("How much to remove from pile B: ");
                     amountToRemove = scan.nextInt();
+                    while(amountToRemove < 0)
+                    {
+                        System.out.println("We can't put any back.... now how many to remove from pile B: ");
+                        amountToRemove = scan.nextInt();
+                    }
+                    while(b - amountToRemove < 0)
+                    {
+                        System.out.println("Can't take more then we have.... now how many to remove from pile B: ");
+                        amountToRemove = scan.nextInt();
+                    }
                     b = b - amountToRemove;
                 }
                 else if(move.equals("c"))
                 {
                     System.out.println("How much to remove from pile C: ");
                     amountToRemove = scan.nextInt();
+                    while(amountToRemove < 0)
+                    {
+                        System.out.println("We can't put any back.... now how many to remove from pile C: ");
+                        amountToRemove = scan.nextInt();
+                    }
+                    while(c - amountToRemove < 0)
+                    {
+                        System.out.println("Can't take more then we have.... now how many to remove from pile C: ");
+                        amountToRemove = scan.nextInt();
+                    }
                     c = c - amountToRemove;
                 }
                 turnNumber++; 
