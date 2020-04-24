@@ -22,6 +22,21 @@ public class nim {
             {
                 System.out.println(player2 + " choose a pile: ");
                 move = scan.next();
+                while(a == 0 && move.equals("a"))
+                {
+                    System.out.println("Nice Try. Pick again ");
+                    move = scan.next();
+                }
+                while(b == 0 && move.equals("b"))
+                {
+                    System.out.println("Nice Try. Pick again ");
+                    move = scan.next();
+                }
+                while(c == 0 && move.equals("c"))
+                {
+                    System.out.println("Nice Try. Pick again ");
+                    move = scan.next();
+                }
                 if(move.equals("a"))
                 {
                     System.out.println("How much to remove from pile A: ");
@@ -41,11 +56,26 @@ public class nim {
                     c = c - amountToRemove;
                 }
                 turnNumber++;
-            }
+        }
             else
             {
                 System.out.println(player1 + " choose a pile: ");
                 move = scan.next();
+                while(a == 0 && move.equals("a"))
+                {
+                    System.out.println("Nice Try. Pick again ");
+                    move = scan.next();
+                }
+                while(b == 0 && move.equals("b"))
+                {
+                    System.out.println("Nice Try. Pick again ");
+                    move = scan.next();
+                }
+                while(c == 0 && move.equals("c"))
+                {
+                    System.out.println("Nice Try. Pick again ");
+                    move = scan.next();
+                }
                 if(move.equals("a"))
                 {
                     System.out.println("How much to remove from pile A: ");
