@@ -3,7 +3,7 @@ import java.util.Random;
 public class nim {
     
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        try(Scanner scan = new Scanner(System.in)) { //try with resources 
         Random r = new Random();
         System.out.println("How big would you like the possible size of the piles to be: ");
         int pileSize = scan.nextInt();
@@ -225,4 +225,5 @@ public class nim {
     else
         System.out.println(player1 + " there is no counters left so you win");
     }
+}
 }
