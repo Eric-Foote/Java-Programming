@@ -55,14 +55,17 @@ public class nim {
                 {
                     System.out.print("A");
                 }
+                System.out.println("");
                 for(int i = 0; i < b; i++)
                 {
                     System.out.print("B");
                 }
+                System.out.println("");
                 for(int i = 0; i < c; i++)
                 {
                     System.out.print("C");
                 }
+                System.out.println("");
             }
             if(graphicsOption == 3)
             {
