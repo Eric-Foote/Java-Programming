@@ -1,0 +1,3 @@
+The purpose of this folder is to contain larger pratice problems and also bigger projects.
+
+These problems are either more advanced to fit into the pratice problem directory or are bigger projects
