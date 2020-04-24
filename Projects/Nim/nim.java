@@ -36,6 +36,19 @@ public class nim {
         while(a != 0 || b != 0 || c != 0)
         {
             System.out.println("A: " + a + "\tB: " + b + "\tC: " + c);
+            for(int i = 0; i < a; i++)
+            {
+                System.out.println("*");
+            }
+            for(int i = 0; i < b; i++)
+            {
+                System.out.println("    *");
+            }
+            for(int i = 0; i < c; i++)
+            {
+                System.out.println("      *");
+            }
+ 
             if(turnNumber % 2 == 0)
             {
                 System.out.println(player2 + " choose a pile: ");
