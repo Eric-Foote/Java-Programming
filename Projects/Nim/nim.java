@@ -1,7 +1,15 @@
+/* 
+This can be refined alot. Repeated blocks of code can be put into functions 
+FOR EXAMPLE
+The game logic can be put into functions to reduce and refine the code
+The graphics option stuff can be put into a function
+We can actually use javax swing and put some of this into dialog boxes 
+*/
+
 import java.util.Scanner;
 import java.util.Random;   
 public class nim {
-    
+
     public static void main(String[] args) {
         try(Scanner scan = new Scanner(System.in)) { //try with resources 
         Random r = new Random();
