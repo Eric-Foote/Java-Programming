@@ -1,3 +1,4 @@
+// This program will be edited over the course of the next 2 pratice problems to gain some actual functionality
 import java.util.Scanner;
 public class keychainsForSale {
     public static void add_keychains()
