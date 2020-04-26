@@ -16,11 +16,14 @@ public class keychainsForSale {
     public static void checkout()
     {
         System.out.println("CHECKOUT");
+    
     }
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
         int input;
+        int currentNumberOfKeychains;
+        int pricePerKeychain;
         System.out.println("Ye Olde Keychain Shoppe");
         System.out.println("1. Add Keychains to Order");
         System.out.println("2. Remove Keychains to Order");
