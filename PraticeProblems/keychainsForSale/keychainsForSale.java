@@ -1,29 +1,44 @@
 // This program will be edited over the course of the next 2 pratice problems to gain some actual functionality
 import java.util.Scanner;
 public class keychainsForSale {
-    public static void add_keychains()
+    public static int add_keychains(int currentNumberOfKeychains, Scanner scan)
     {
-        System.out.println("ADD KEYCHAINS");
+        System.out.println("You have " + currentNumberOfKeychains + ". How many to add?");
+        currentNumberOfKeychains = scan.nextInt();
+        System.out.println("You now have " + currentNumberOfKeychains + " keychains");
+        return currentNumberOfKeychains;
     }
-    public static void remove_keychains()
-    {
-        System.out.println("REMOVE KEYCHAINS");
+    public static int remove_keychains(int currentNumberOfKeychains, Scanner scan)
+    { // this function needs to be fleshed out with some pseudo error checking to make sure that the customer is not going to remove more keychains then there is in the cart.
+        if(currentNumberOfKeychains < 0)
+        {
+            System.out.println("We can't remove any keychains yet... you need to add some to the cart");
+            return currentNumberOfKeychains;
+        }
+        return currentNumberOfKeychains;
     }
-    public static void view_order()
+    public static void view_order(int currentNumberOfKeychains, int pricePerKeychain)
     {
-        System.out.println("VIEW ORDER");
+        System.out.println("You have " + currentNumberOfKeychains);
+        System.out.println("Keychains cost $" + pricePerKeychain + " each");
+        System.out.println("Total cost is " + (currentNumberOfKeychains*pricePerKeychain));
     }
-    public static void checkout()
+    public static void checkout(int currentNumberOfKeychains, int pricePerKeychain,Scanner scan)
     {
-        System.out.println("CHECKOUT");
+        System.out.println("What is your name? ");
+        String name = scan.next();
+        System.out.println("You have " + currentNumberOfKeychains);
+        System.out.println("Keychains cost $" + pricePerKeychain + " each");
+        System.out.println("Total cost is " + (currentNumberOfKeychains*pricePerKeychain));
+        System.out.println("Thanks for your order, " + name);
     
     }
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
         int input;
-        int currentNumberOfKeychains;
-        int pricePerKeychain;
+        int currentNumberOfKeychains = 0;
+        int pricePerKeychain = 10;
         System.out.println("Ye Olde Keychain Shoppe");
         System.out.println("1. Add Keychains to Order");
         System.out.println("2. Remove Keychains to Order");
@@ -37,15 +52,15 @@ public class keychainsForSale {
         {
             if(input == 1)
             {
-                add_keychains();
+                currentNumberOfKeychains = add_keychains(currentNumberOfKeychains, scan);
             }
             else if(input == 2)
             {
-                remove_keychains();
+                currentNumberOfKeychains = remove_keychains(currentNumberOfKeychains, scan);
             }
             else if(input == 3)
             {
-                view_order();
+                view_order(currentNumberOfKeychains, pricePerKeychain);
             }
             System.out.println("");
             System.out.println("Ye Olde Keychain Shoppe");
@@ -61,7 +76,7 @@ public class keychainsForSale {
         }
         if(input == 4)
         {
-            checkout();
+            checkout(currentNumberOfKeychains,pricePerKeychain, scan);
         }
     }
 }
