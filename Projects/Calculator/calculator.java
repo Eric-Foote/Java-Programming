@@ -26,6 +26,29 @@ public class calculator {
     {
         return Math.pow(operand1, operand2);
     }
+    public static int modulous (double operand1, double operand2)
+    {
+        return (int) operand1 % (int) operand2;
+    }
+    public static double negation(double operand1)
+    {
+        return -operand1;
+    }
+    public static int factorial(double operand1)
+    {
+      // going to use a dynamic programming approach
+        int oprand1 = (int) operand1;
+        int result[] = {0};
+        if(operand1 >= 0)
+        {
+            result[0] = 1;
+        }
+        for (int i = 1; i <= operand1; i++) 
+        {
+            result[i] = i * result[i - 1];
+        }
+    return result[(int) operand1];
+    }
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
@@ -60,11 +83,34 @@ public class calculator {
         {
             System.out.println(exponents(operand1, operand2));
         }
+        else if(operation.equals("%"))
+        {
+            System.out.println(modulous(operand1, operand2));
+        }
         statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
         statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
         operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
         operation =  Character.toString(statement.charAt(1)); // cast the operand as a string 
         operand2 = Double.valueOf(Character.toString(statement.charAt(2)));; // cast the third piece of input string as a double
+    
+}
+    if(statement.length() == 1) 
+    {
+        operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
+        operation =  Character.toString(statement.charAt(1)); // cast the operand as a string
+        while(operand1 != 0){
+            if(operation.equals("-"))
+            {
+                negation(operand1);
+            }
+            if(operation.equals("!"))
+            {
+                factorial(operand1);
+            }
+            statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
+            statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
+            operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
+        } 
     }
 }
 }
