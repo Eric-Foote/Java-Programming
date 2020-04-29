@@ -10,7 +10,7 @@ public class oneShotHiLo {
         System.out.println("I'm thinking of a number between 1-100. Try to guess it. You have 7 guesses.");
         System.out.println("Attempt: #" + attempts);
         guess = scan.nextInt();
-        while(guess != randomNumber && attempts <= 7)
+        while(guess != randomNumber && attempts < 7)
         {
             if(guess > randomNumber)
             {
