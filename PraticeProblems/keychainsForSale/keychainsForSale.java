@@ -15,7 +15,19 @@ public class keychainsForSale {
             System.out.println("We can't remove any keychains yet... you need to add some to the cart");
             return currentNumberOfKeychains;
         }
-        return currentNumberOfKeychains;
+        System.out.println("You have " + currentNumberOfKeychains + " how many to remove? ");
+        int keychainsToBeRemoved = scan.nextInt();
+        if (keychainsToBeRemoved < 0) 
+        {
+            System.out.println("You cant but back any keychains");
+            return currentNumberOfKeychains;
+        }
+        if ((currentNumberOfKeychains - keychainsToBeRemoved) < 0)
+        {
+            System.out.println("Can't remove more keychains then you have");
+            return currentNumberOfKeychains;
+        }
+        return (currentNumberOfKeychains - keychainsToBeRemoved);
     }
     public static void view_order(int currentNumberOfKeychains, int pricePerKeychain)
     {
