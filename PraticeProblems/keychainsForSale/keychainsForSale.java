@@ -39,9 +39,11 @@ public class keychainsForSale {
         System.out.println("You have " + currentNumberOfKeychains);
         System.out.println("Keychains cost $" + pricePerKeychain + " each");
         System.out.println("Shipping cost is $" + shippingCostPerOrder);
-        System.out.println("Sub total before tax is $" + (currentNumberOfKeychains*pricePerKeychain));
-        System.out.println("The tax on the order is $" + (salesTax * (currentNumberOfKeychains*pricePerKeychain)));
-        System.out.println("The total is: $" + (salesTax * (currentNumberOfKeychains*pricePerKeychain) + currentNumberOfKeychains*pricePerKeychain + currentNumberOfKeychains*perKeychainCost + shippingCostPerOrder));
+        int subTotalBeforeTax = (currentNumberOfKeychains*pricePerKeychain);
+        double subTotalWithTax = salesTax * subTotalBeforeTax; 
+        System.out.println("Sub total before tax is $" + subTotalBeforeTax);
+        System.out.println("The tax on the order is $" + subTotalWithTax);
+        System.out.println("The total is: $" + (subTotalBeforeTax + subTotalWithTax + currentNumberOfKeychains*perKeychainCost + shippingCostPerOrder));
     }
     public static void checkout(int currentNumberOfKeychains, int pricePerKeychain,Scanner scan, double salesTax, int shippingCostPerOrder, int perKeychainCost)
     {
@@ -57,7 +59,7 @@ public class keychainsForSale {
         int input;
         int currentNumberOfKeychains = 0;
         int pricePerKeychain = 10;
-        double salesTax = 0.825;
+        double salesTax = 0.0825; //OOPS! had the tax as 82.5% 
         int shippingCostPerOrder = 5;
         int perKeychainCost = 1;
         System.out.println("Ye Olde Keychain Shoppe");
