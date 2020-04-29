@@ -49,6 +49,7 @@ public class calculator {
         }
     return result[(int) operand1];
     }
+    
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
@@ -59,6 +60,8 @@ public class calculator {
         //https://stackoverflow.com/questions/12524243/how-do-i-make-java-register-a-string-input-with-spaces source for the fix
         statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
         statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
+        //System.out.println(statement.length()); these statements have length 3
+        if(statement.length() == 3){
         operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
         operation =  Character.toString(statement.charAt(1)); // cast the operand as a string 
         operand2 = Double.valueOf(Character.toString(statement.charAt(2)));; // cast the third piece of input string as a double
@@ -94,18 +97,19 @@ public class calculator {
         operand2 = Double.valueOf(Character.toString(statement.charAt(2)));; // cast the third piece of input string as a double
     
 }
-    if(statement.length() == 1) 
+        }
+    if(statement.length() == 2) 
     {
         operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
         operation =  Character.toString(statement.charAt(1)); // cast the operand as a string
         while(operand1 != 0){
             if(operation.equals("-"))
             {
-                negation(operand1);
+                System.out.println(negation(operand1));
             }
             if(operation.equals("!"))
             {
-                factorial(operand1);
+                System.out.println(factorial(operand1));
             }
             statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
             statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
