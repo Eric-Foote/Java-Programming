@@ -5,6 +5,11 @@ public class keychainsForSale {
     {
         System.out.println("You have " + currentNumberOfKeychains + ". How many to add?");
         currentNumberOfKeychains = scan.nextInt();
+        if (currentNumberOfKeychains < 0)
+        {
+            System.out.println("You cant put in the cart a negative number of keychains");
+            return 0;
+        }
         System.out.println("You now have " + currentNumberOfKeychains + " keychains");
         return currentNumberOfKeychains;
     }
@@ -29,19 +34,20 @@ public class keychainsForSale {
         }
         return (currentNumberOfKeychains - keychainsToBeRemoved);
     }
-    public static void view_order(int currentNumberOfKeychains, int pricePerKeychain)
+    public static void view_order(int currentNumberOfKeychains, int pricePerKeychain, double salesTax, int shippingCostPerOrder, int perKeychainCost)
     {
         System.out.println("You have " + currentNumberOfKeychains);
         System.out.println("Keychains cost $" + pricePerKeychain + " each");
-        System.out.println("Total cost is " + (currentNumberOfKeychains*pricePerKeychain));
+        System.out.println("Shipping cost is $" + shippingCostPerOrder);
+        System.out.println("Sub total before tax is $" + (currentNumberOfKeychains*pricePerKeychain));
+        System.out.println("The tax on the order is $" + (salesTax * (currentNumberOfKeychains*pricePerKeychain)));
+        System.out.println("The total is: $" + (salesTax * (currentNumberOfKeychains*pricePerKeychain) + currentNumberOfKeychains*pricePerKeychain + currentNumberOfKeychains*perKeychainCost + shippingCostPerOrder));
     }
-    public static void checkout(int currentNumberOfKeychains, int pricePerKeychain,Scanner scan)
+    public static void checkout(int currentNumberOfKeychains, int pricePerKeychain,Scanner scan, double salesTax, int shippingCostPerOrder, int perKeychainCost)
     {
         System.out.println("What is your name? ");
         String name = scan.next();
-        System.out.println("You have " + currentNumberOfKeychains);
-        System.out.println("Keychains cost $" + pricePerKeychain + " each");
-        System.out.println("Total cost is " + (currentNumberOfKeychains*pricePerKeychain));
+        view_order(currentNumberOfKeychains, pricePerKeychain, salesTax, shippingCostPerOrder, perKeychainCost);
         System.out.println("Thanks for your order, " + name);
     
     }
@@ -51,6 +57,9 @@ public class keychainsForSale {
         int input;
         int currentNumberOfKeychains = 0;
         int pricePerKeychain = 10;
+        double salesTax = 0.825;
+        int shippingCostPerOrder = 5;
+        int perKeychainCost = 1;
         System.out.println("Ye Olde Keychain Shoppe");
         System.out.println("1. Add Keychains to Order");
         System.out.println("2. Remove Keychains to Order");
@@ -72,7 +81,11 @@ public class keychainsForSale {
             }
             else if(input == 3)
             {
-                view_order(currentNumberOfKeychains, pricePerKeychain);
+                view_order(currentNumberOfKeychains, pricePerKeychain, salesTax, shippingCostPerOrder, perKeychainCost);
+            }
+            else 
+            {
+                System.out.println("Not a valid menu choice");
             }
             System.out.println("");
             System.out.println("Ye Olde Keychain Shoppe");
@@ -88,7 +101,7 @@ public class keychainsForSale {
         }
         if(input == 4)
         {
-            checkout(currentNumberOfKeychains,pricePerKeychain, scan);
+            checkout(currentNumberOfKeychains,pricePerKeychain, scan, salesTax, shippingCostPerOrder, perKeychainCost);
         }
     }
 }
