@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.lang.Math;
 public class calculator {
     // these functions are fine we just need to find an easier method to parsing the input string to give us variable length numbers
+    
     public static double addition(double operand1, double operand2)
     {
         return operand1 + operand2;
@@ -65,7 +66,21 @@ public class calculator {
     
     public static void main(String[] args) 
     {
-      /*
+        Scanner scan = new Scanner(System.in);
+        String statement = scan.next();
+        String value1[] = statement.split("^([0-9])"); // this should give us all the numbers at the beginning
+        String value2[] = statement.split("$[0-9]"); // this should give us the operation that needs to be performed 
+        String op[] = statement.split("[^0-9]"); // this should give us the numbers at the end
+ 
+       String operand1 = value1.toString();
+       String operand2 = value2.toString();
+       String operation = op.toString();
+ 
+       System.out.println(operand1);
+       System.out.println(operand2);
+       System.out.println(operation);
+
+        /*
         Scanner scan = new Scanner(System.in);
         String statement;
         double operand1;
