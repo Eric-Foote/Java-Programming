@@ -57,7 +57,10 @@ public class calculator {
     return result[(int) operand1];
 */    
     }
-
+    public static double root(double operand1, double operand2) 
+    { 
+     return Math.pow(operand2, 1/operand2); //this will give us a close enough answer for this kinda calculator 
+    }
     
     public static void main(String[] args) 
     {
@@ -69,7 +72,7 @@ public class calculator {
         //https://stackoverflow.com/questions/12524243/how-do-i-make-java-register-a-string-input-with-spaces source for the fix
         statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
         statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
-        //System.out.println(statement.length()); these statements have length 3
+        System.out.println(statement.length()); 
         operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
         while(operand1 != 0){
             if(statement.length() == 3){
@@ -110,15 +113,37 @@ public class calculator {
                 {
                 System.out.println(negation(operand1));
                 }
-                if(operation.equals("!"))
+                else if(operation.equals("!"))
                 {
                 System.out.println(factorial(operand1));
                 }
-
             }
+
+            if(statement.length() == 5)
+            {
+                operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
+                operation =  statement.substring(1, 4); // cast the operand as a string 
+                 if(operation.equals("sqrt"))
+                {
+                System.out.println(root(operand1,2));
+                }
+            }
+
+            if(statement.length() == 6)
+            {
+                operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
+                operation =  statement.substring(1, 4); // cast the operand as a string 
+                operand2 = Double.valueOf(Character.toString(statement.charAt(5)));; // cast the third piece of input string as a double
+                if(operation.equals("root"))
+                {
+                System.out.println(root(operand1, operand2));
+                }
+            }
+
             statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
             statement = statement.replaceAll("\\s", ""); //this should replace all the spaces 
             operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
-    }
+    
+}
 }
 }
