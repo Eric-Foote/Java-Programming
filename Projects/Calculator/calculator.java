@@ -34,7 +34,7 @@ public class calculator {
     {
         return -operand1;
     }
-    public static int factorial(double operand1)
+    public static int factorial(double operand1) // doesnt seem to work right now? Going to go back to my algorithmics notes 
     {
       // going to use a dynamic programming approach
         int oprand1 = (int) operand1;
@@ -61,60 +61,55 @@ public class calculator {
         statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
         statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
         //System.out.println(statement.length()); these statements have length 3
-        if(statement.length() == 3){
         operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
-        operation =  Character.toString(statement.charAt(1)); // cast the operand as a string 
-        operand2 = Double.valueOf(Character.toString(statement.charAt(2)));; // cast the third piece of input string as a double
         while(operand1 != 0){
-        if(operation.equals("+"))
-        {
-            System.out.println(addition(operand1, operand2));
-        }
-        else if(operation.equals("-"))
-        {
-            System.out.println(subtraction(operand1, operand2));
-        }
-        else if(operation.equals("*"))
-        {
-            System.out.println(multiplication(operand1, operand2));
-        }
-        else if(operation.equals("/"))
-        {
-            System.out.println(division(operand1, operand2));   
-        }
-        else if(operation.equals("^"))
-        {
-            System.out.println(exponents(operand1, operand2));
-        }
-        else if(operation.equals("%"))
-        {
-            System.out.println(modulous(operand1, operand2));
-        }
-        statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
-        statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
-        operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
-        operation =  Character.toString(statement.charAt(1)); // cast the operand as a string 
-        operand2 = Double.valueOf(Character.toString(statement.charAt(2)));; // cast the third piece of input string as a double
-    
-}
-        }
-    if(statement.length() == 2) 
-    {
-        operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
-        operation =  Character.toString(statement.charAt(1)); // cast the operand as a string
-        while(operand1 != 0){
-            if(operation.equals("-"))
-            {
-                System.out.println(negation(operand1));
+            if(statement.length() == 3){
+                operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
+                operation =  Character.toString(statement.charAt(1)); // cast the operand as a string 
+                operand2 = Double.valueOf(Character.toString(statement.charAt(2)));; // cast the third piece of input string as a double
+                if(operation.equals("+"))
+                {
+                System.out.println(addition(operand1, operand2));
+                }
+                else if(operation.equals("-"))
+                {
+                System.out.println(subtraction(operand1, operand2));
+                }
+                else if(operation.equals("*"))
+                {
+                System.out.println(multiplication(operand1, operand2));
+                }
+                else if(operation.equals("/"))
+                {
+                System.out.println(division(operand1, operand2));   
+                }
+                else if(operation.equals("^"))
+                {
+                System.out.println(exponents(operand1, operand2));
+                }
+                else if(operation.equals("%"))
+                {
+                System.out.println(modulous(operand1, operand2));
+                }
             }
-            if(operation.equals("!"))
+        
+            if(statement.length() == 2) 
             {
+                operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
+                operation =  Character.toString(statement.charAt(1)); // cast the operand as a string
+                if(operation.equals("-"))
+                {
+                System.out.println(negation(operand1));
+                }
+                if(operation.equals("!"))
+                {
                 System.out.println(factorial(operand1));
+                }
+
             }
             statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
-            statement = statement.replaceAll("\\s", ""); //this should replace all the spaces
+            statement = statement.replaceAll("\\s", ""); //this should replace all the spaces 
             operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
-        } 
     }
 }
 }
