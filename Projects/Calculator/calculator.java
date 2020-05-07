@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 public class calculator {
+    // these functions are fine we just need to find an easier method to parsing the input string to give us variable length numbers
     public static double addition(double operand1, double operand2)
     {
         return operand1 + operand2;
@@ -57,9 +58,9 @@ public class calculator {
     return result[(int) operand1];
 */    
     }
-    public static double root(double operand1, double operand2) 
+    public static double root(double operand1, double operand2)  
     { 
-     return Math.pow(operand2, 1/operand2); //this will give us a close enough answer for this kinda calculator 
+     return Math.pow(operand1, 1/operand2); //this will give us a close enough answer for this kinda calculator 
     }
     
     public static void main(String[] args) 
