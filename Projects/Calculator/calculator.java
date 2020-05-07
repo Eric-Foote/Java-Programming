@@ -36,10 +36,17 @@ public class calculator {
     }
     public static int factorial(double operand1) // doesnt seem to work right now? Going to go back to my algorithmics notes 
     {
-      // going to use a dynamic programming approach
-        int oprand1 = (int) operand1;
+      int factorial = 1;
+      int operand = (int)operand1; //cast to an integer
+      for(int i = 1; i <= operand; i++){
+        factorial = factorial*i; 
+      }
+      return factorial;
+        
+      /* Dont know why dynamic programming is not working so regular for loop instead 
+       // going to use a dynamic programming approach
         int result[] = {0};
-        if(operand1 >= 0)
+        if(operand1 == 0)
         {
             result[0] = 1;
         }
@@ -48,7 +55,9 @@ public class calculator {
             result[i] = i * result[i - 1];
         }
     return result[(int) operand1];
+*/    
     }
+
     
     public static void main(String[] args) 
     {
