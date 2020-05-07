@@ -75,7 +75,7 @@ public class calculator {
         System.out.println(statement.length()); 
         operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
         while(operand1 != 0){
-            if(statement.length() == 3){
+            if(statement.length() == 3){ // the problem is that we can currently only do addition with just 1-9
                 operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
                 operation =  Character.toString(statement.charAt(1)); // cast the operand as a string 
                 operand2 = Double.valueOf(Character.toString(statement.charAt(2)));; // cast the third piece of input string as a double
