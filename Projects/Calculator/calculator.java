@@ -65,6 +65,7 @@ public class calculator {
     
     public static void main(String[] args) 
     {
+      /*
         Scanner scan = new Scanner(System.in);
         String statement;
         double operand1;
@@ -144,7 +145,7 @@ public class calculator {
             statement = scan.nextLine(); // this will read the whole line of input rather then the first character only
             statement = statement.replaceAll("\\s", ""); //this should replace all the spaces 
             operand1 = Double.valueOf(Character.toString(statement.charAt(0))); // cast the first piece of the input string as a double
-    
+    */
 }
 }
-}
+//}
