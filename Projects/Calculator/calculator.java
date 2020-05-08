@@ -67,19 +67,92 @@ public class calculator {
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
-        String statement = scan.next();
-        String value1[] = statement.split("^([0-9])"); // this should give us all the numbers at the beginning
-        String value2[] = statement.split("$[0-9]"); // this should give us the operation that needs to be performed 
-        String op[] = statement.split("[^0-9]"); // this should give us the numbers at the end
+        double operand1 = scan.nextDouble();
+        if(operand1 == 0) 
+        {
+            return; //closes the program outright
+        }
+        String operation = scan.next();
+        if(operation.equals("--"))
+        {
+        System.out.println(negation(operand1));
+        operand1 = scan.nextDouble();
+        operation = scan.next();
+        }
+        if(operation.equals("!"))
+        {
+        System.out.println(factorial(operand1));
+        operand1 = scan.nextDouble();
+        operation = scan.next();
+        }
+        if(operation.equals("sqrt"))
+        {
+        System.out.println(root(operand1,2));
+        operand1 = scan.nextDouble();
+        operation = scan.next();
+        }
+        double operand2 = scan.nextDouble();
+        //String statement = scan.next();
+        //String value1[] = statement.split("^([0-9])"); // this should give us all the numbers at the beginning
+        //String value2[] = statement.split("$[0-9]"); // this should give us the operation that needs to be performed 
+        //String op[] = statement.split("[^0-9]"); // this should give us the numbers at the end
  
-       String operand1 = value1.toString();
-       String operand2 = value2.toString();
-       String operation = op.toString();
- 
-       System.out.println(operand1);
-       System.out.println(operand2);
-       System.out.println(operation);
+      // String operand1 = value1.toString();
+      // String operand2 = value2.toString();
+      // String operation = op.toString();
 
+        while(operand1 != 0) 
+        {
+            if(operation.equals("+"))
+                {
+                System.out.println(addition(operand1, operand2));
+                }
+                else if(operation.equals("-"))
+                {
+                System.out.println(subtraction(operand1, operand2));
+                }
+                else if(operation.equals("*"))
+                {
+                System.out.println(multiplication(operand1, operand2));
+                }
+                else if(operation.equals("/"))
+                {
+                System.out.println(division(operand1, operand2));   
+                }
+                else if(operation.equals("^"))
+                {
+                System.out.println(exponents(operand1, operand2));
+                }
+                else if(operation.equals("%"))
+                {
+                System.out.println(modulous(operand1, operand2));
+                }
+                else if(operation.equals("root"))
+                {
+                System.out.println(root(operand1, operand2));
+                }
+                operand1 = scan.nextDouble();
+                operation = scan.next();
+                if(operation.equals("--"))
+                {
+                System.out.println(negation(operand1));
+                operand1 = scan.nextDouble();
+                operation = scan.next();
+                }
+                if(operation.equals("!"))
+                {
+                System.out.println(factorial(operand1));
+                operand1 = scan.nextDouble();
+                operation = scan.next();
+                }
+                if(operation.equals("sqrt"))
+                {
+                System.out.println(root(operand1,2));
+                operand1 = scan.nextDouble();
+                operation = scan.next();
+                }
+                operand2 = scan.nextDouble();
+        }
         /*
         Scanner scan = new Scanner(System.in);
         String statement;
