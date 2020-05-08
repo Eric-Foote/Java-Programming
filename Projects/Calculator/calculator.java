@@ -63,6 +63,20 @@ public class calculator {
     { 
      return Math.pow(operand1, 1/operand2); //this will give us a close enough answer for this kinda calculator 
     }
+
+    /*
+    I still need to implement: 
+    1) error messages
+    2) Handling of trig functions
+    3) Converting between degrees and radians
+    4) Some sort of help features
+    5) Using the previous result in the next calculation
+    6) The ability to store and recall results
+    7) Rounding
+    8) Logs
+    9) Converting between base 10 and binary
+    I am going to come back to this later on and work on it
+    */
     
     public static void main(String[] args) 
     {
