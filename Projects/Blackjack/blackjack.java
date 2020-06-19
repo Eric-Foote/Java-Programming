@@ -12,6 +12,15 @@
 import java.util.Random;
 public class blackjack {
     public static void main(String[] args) {
-        
+	Random r = new Random();
+	int playerCard1 = 2 + r.nextInt(10);
+	int playerCard2 = 2 + r.nextInt(10);
+	int dealerCard1 = 2 + r.nextInt(10);
+	int dealerCard2 = 2 + r.nextInt(10);
+	int playerTotal = playerCard1 + playerCard2;
+	int dealerTotal = dealerCard1 + dealerCard2;
+
+
+
     }
 }
