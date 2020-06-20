@@ -33,20 +33,33 @@ public class blackjack {
 	
 	// The initial totals for both the dealer and the player
 
-	int playerTotal = playerCard1 + playerCard2;
-	int dealerTotal = dealerCard1 + dealerCard2;
+	playerTotal = playerCard1 + playerCard2;
+	dealerTotal = dealerCard1 + dealerCard2;
 
 	System.out.println("Welcome to blackjack");
 	System.out.println("You have a " + playerCard1 + " and a " + playerCard2);
-	System.out.println("Your total is playerTotal);
+	System.out.println("Your total is " +  playerTotal);
 	
 	if(dealerChoice == 1)
 		System.out.println("The dealer has a " + dealerCard1 + " showing, and a hidden card.");
 	else 
 		System.out.println("The dealer has a " + dealerCard2 + " showing, and a hidden card.");
 
-	System.out.println("Their total is hidden, too);
+	System.out.println("Their total is hidden, too");
 
+	while(playerTotal <= 21 ||  dealerTotal <= 21)
+	{
+		System.out.println("Do you hit or pass");
+		playerChoice = scan.next(); 
+		if(playerChoice.equals("hit")
+		{
+		}
+		else
+		{
+		System.out.println("Your total stays the same " + playerTotal);
+		}
+		//The dealer always hits when its total is less then or equal to 16
+	}
 		
 
 
