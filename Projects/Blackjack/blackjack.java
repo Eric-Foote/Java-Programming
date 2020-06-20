@@ -47,7 +47,7 @@ public class blackjack {
 
 	System.out.println("Their total is hidden, too");
 
-	while(playerTotal <= 21 ||  dealerTotal <= 21)
+	while(playerTotal <= 21 ||  dealerTotal <= 21) // While no one has busted
 	{
 		System.out.println("Do you hit or pass");
 		playerChoice = scan.next(); 
@@ -58,7 +58,7 @@ public class blackjack {
 		{
 		System.out.println("Your total stays the same " + playerTotal);
 		}
-		//The dealer always hits when its total is less then or equal to 16
+		// The dealer always hits when its total is less then or equal to 16
 	}
 		
 
