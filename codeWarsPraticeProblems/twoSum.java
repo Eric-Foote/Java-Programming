@@ -8,32 +8,23 @@
 
 public class twoSum {
 
-    public static int[] twoSum(int[] numbers, int target)
-
-    {
-	int[] solution = {};
-	int numbersLength = numbers.length;
-	int newtarget;
-	for(int i = 0; i <= numbersLength; i++)
-	{
-		newtarget = target - numbers[i];
-		for (int j = i + 1; j <= numbersLength; j++) {
-			if((newtarget - j) == 0){
-				solution[0] = i;
-				solution[1] = j;
-				
-	       				       
+public static int[] twoSum(int[] numbers, int target)
+{
+        int[] solution = new int[2];
+        int newtarget;
+        for(int i = 0; i < numbers.length; i++)
+        {
+                newtarget = target - numbers[i];
+                for (int j = i + 1; j < numbers.length; j++) {
+			 if((newtarget - j) == 0){       
+				 solution[0] = i;
+                                 solution[1] = j;
+			 } 
 		}
-
 	}
-
-
-	
-    }
-    return solution;
-    }
-
-    public static void main (String[] args) 
+	return solution;
+}
+       	public static void main (String[] args) 
     {
 	int [] test = {1,2,3};
 	int testTarget = 4;
