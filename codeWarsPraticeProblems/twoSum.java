@@ -11,6 +11,7 @@ public class twoSum {
     public static int[] twoSum(int[] numbers, int target)
 
     {
+	int[] solution = {};
 	int numbersLength = numbers.length;
 	int newtarget;
 	for(int i = 0; i <= numbersLength; i++)
@@ -18,9 +19,9 @@ public class twoSum {
 		newtarget = target - numbers[i];
 		for (int j = i + 1; j <= numbersLength; j++) {
 			if((newtarget - j) == 0){
-				//solution[0] = i;
-				//solution[1] = j;
-				return numbers{i,j};
+				solution[0] = i;
+				solution[1] = j;
+				
 	       				       
 		}
 
@@ -29,6 +30,7 @@ public class twoSum {
 
 	
     }
+    return solution;
     }
 
     public static void main (String[] args) 
