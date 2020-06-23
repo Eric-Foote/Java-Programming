@@ -29,7 +29,7 @@ public static int[] twoSum(int[] numbers, int target)
 	int [] test = {1,2,3};
 	int testTarget = 4;
 	int [] solution = twoSum(test,testTarget);
-	for(int i = 0; i <= solution.length; i++)
+	for(int i = 0; i < solution.length; i++)
 		System.out.println(solution[i]);
     }
 
