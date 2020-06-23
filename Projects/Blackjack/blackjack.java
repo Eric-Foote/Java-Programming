@@ -49,19 +49,30 @@ public class blackjack {
 
 	while(playerTotal <= 21 ||  dealerTotal <= 21) // While no one has busted
 	{
-		System.out.println("Do you hit or pass");
+		System.out.println("Would you like to "hit" or "stay"?");
 		playerChoice = scan.next(); 
-		if(playerChoice.equals("hit")
+		if(playerChoice.equals("hit"))
 		{
 		}
-		else
+		else if(playerChoice.equals("stay"))
 		{
 		System.out.println("Your total stays the same " + playerTotal);
 		}
+		else
+			{
+				System.out.println("Has to be either hit or stay");
+				System.out.println("Would you like to "hit" or "stay"?");
+				playerChoice = scan.next();
+				if(playerChoice.equals("hit"))
+					{
+					}
+				else if(playerChoice.equals("stay"))
+					{
+						System.out.println("Your total stays the same " + playerTotal);
+					}
+			}
 		// The dealer always hits when its total is less then or equal to 16
-	}
-		
 
 
     }
-}
+	}
