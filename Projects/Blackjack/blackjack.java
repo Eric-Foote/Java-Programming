@@ -49,10 +49,14 @@ public class blackjack {
 
 	while(playerTotal <= 21 ||  dealerTotal <= 21) // While no one has busted
 	{
-		System.out.println("Would you like to "hit" or "stay"?");
+		System.out.println("Would you like to \"hit\" or \"stay\"?");
 		playerChoice = scan.next(); 
 		if(playerChoice.equals("hit"))
-		{
+		{ 
+			newPlayerCard = 2 + r.nextInt(10);
+			playerTotal = playerTotal + newPlayerCard;
+			System.out.println("You have a " + newPlayerCard);
+			System.out.println("Your total is " +  playerTotal);
 		}
 		else if(playerChoice.equals("stay"))
 		{
@@ -61,18 +65,35 @@ public class blackjack {
 		else
 			{
 				System.out.println("Has to be either hit or stay");
-				System.out.println("Would you like to "hit" or "stay"?");
+				System.out.println("Would you like to \"hit\" or \"stay\"?");
 				playerChoice = scan.next();
 				if(playerChoice.equals("hit"))
 					{
+						newPlayerCard = 2 + r.nextInt(10);
+						playerTotal = playerTotal + newPlayerCard;					
+						System.out.println("You have a " + newPlayerCard);
+                        			System.out.println("Your total is " +  playerTotal);
 					}
 				else if(playerChoice.equals("stay"))
 					{
 						System.out.println("Your total stays the same " + playerTotal);
 					}
 			}
-		// The dealer always hits when its total is less then or equal to 16
+		if(dealerTotal <= 16) 
+		{
+			newDealerCard = 2 + r.nextInt(10);
+			dealerTotal = dealerTotal + newDealerCard;
+
+		}
+
 
 
     }
+    	// Now we check to see who has lost the game
+    	if(playerTotal >= 21) {
+	System.out.println("You have lost the game");
+	}
+	if(dealerTotal >= 21) {
+	System.out.println("You have won the game");
+	}
 	}
