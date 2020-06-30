@@ -47,7 +47,7 @@ public class blackjack {
 
 	System.out.println("Their total is hidden, too");
 
-	while(playerTotal <= 21 ||  dealerTotal <= 21) // While no one has busted
+	while(playerTotal <= 21 && dealerTotal <= 21) // While no one has busted
 	{
 		System.out.println("Would you like to \"hit\" or \"stay\"?");
 		playerChoice = scan.next(); 
@@ -85,7 +85,6 @@ public class blackjack {
 			dealerTotal = dealerTotal + newDealerCard;
 
 		}
-
 
 
     }
