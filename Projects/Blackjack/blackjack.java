@@ -98,3 +98,8 @@ public class blackjack {
 	}
 }
 
+/* I still need to 
+ * Fix the logic of the game 
+ * 	The dealers hitting should be inside the while loop
+ * 	If the player passes and the dealer passes then we should check the totals and who ever has the highest total wins
+ * Then we need to add in some special things to make it unique
