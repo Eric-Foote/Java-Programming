@@ -8,13 +8,13 @@ public class summingThreeNumbersFromAFile {
 			File file = new File("3nums.txt");
 			Scanner scan = new Scanner (file);
 			System.out.println("Reading numbers from file " + file.getName() + "... done\n");
-			while (scan.hasNextLine()) {
+			while (scan.hasNextInt()) {
 				int num = scan.nextInt();
 				System.out.print(num + " + ");
 				sum = sum + num;
 			}
 			scan.close();
-			System.out.print(" = " + sum);
+			System.out.print(" = " + sum + "\n");
 		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
