@@ -13,12 +13,18 @@ public class findingTheLargestValueInAnArray {
 		int highValue = 0;
 		for(int i = 0; i < (arr.length - 1); i++) {
 			if(arr[i] >= arr[i+1]){
-				highValue = arr[i];
+				if(highValue >= arr[i])
+					highValue = highValue;
+				else
+					highValue = arr[i];	
 			}
 			else 
-				highValue = arr[i+1];
+				if(highValue >= arr[i])
+					highValue = highValue;
+				else
+					highValue = arr[i+1];
 		}
-		System.out.println("The largest value is " + highValue);
+		System.out.println("\nThe largest value is " + highValue);
 	}
 }
 
