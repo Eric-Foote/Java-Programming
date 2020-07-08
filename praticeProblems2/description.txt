@@ -1,0 +1,2 @@
+This folder is going to contain some of the pratice programming problems from the textbook that I used during my first year couress in Java Programming, this folder is going to fill in the blanks for the remaining "Intro to Java" material that Programming by Doing did not cover
+
