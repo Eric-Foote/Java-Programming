@@ -11,10 +11,45 @@
  * setTestScore that accepts two parameters: the test number (1 through 3) and the score. Also 
  * provide a method called getTestScore that accepts the test number and returns the appropriate 
  * score. Provide a method called average that computes and returns the average test score for this
- * student. Modify the toString method such that teh test scores and average are included in the 
+ * student. Modify the toString method such that the test scores and average are included in the 
  * description of the student. Modify the driver class main method to exerciee the new Student
  * methods.
  * We are given some code to start with on pg.318
 */
 
 import java.util.ArrayList;
+
+public class Student {
+	private String firstName, lastName;
+	private Address homeAddress, schoolAddress;
+	public Student(String first, String last, Address home, Address school) {
+		firstName = first;
+		lastName = last;
+		homeAddress = home;
+		schoolAddress = school;
+	}
+	public String toString()
+	{
+		String result = firstName + " " + lastName + " " + "\n" + "Home Address:\n" + homeAddress + "\n" + "School Address:\n" + schoolAddress;
+		return result;
+	}
+}
+
+public class Address
+{
+	private String streetAddress, city, province;
+	private long postalCode;
+	public Address(String street, String town, String prov, long post)
+	{
+		streetAddress = street;
+		city = town;
+		province = prov;
+		postalCode = post;
+	}
+	public String toString()
+	{
+		String result = streetAddress + "\n" + city  + ", " + "\n" + province + " " + postalCode;
+                return result;
+	}
+
+
