@@ -4,7 +4,10 @@
  * Student parameter. Provide a method called average that computes and returns the average of all
  * students' test score averages. Provide a method called roll that prints all the students in the
  * course. Create a driver class with a main method that creates a course, adds several students,
- * prints a roll, and prints the overall course test average. Modify the Student class presented
+ * prints a roll, and prints the overall course test average. 
+ *
+ *
+ * Modify the Student class presented
  * in the chapter as follows, Each student object should also contain the scores for three tests.
  * Provide a constructor that sets all instance values based on paramter values. Overload the 
  * constructor such that each test score is assumed to be initally zero. Provide a method called
@@ -17,39 +20,17 @@
  * We are given some code to start with on pg.318
 */
 
+/* This file is going to contain the Course class and the driver class */
+
 import java.util.ArrayList;
 
-public class Student {
-	private String firstName, lastName;
-	private Address homeAddress, schoolAddress;
-	public Student(String first, String last, Address home, Address school) {
-		firstName = first;
-		lastName = last;
-		homeAddress = home;
-		schoolAddress = school;
-	}
-	public String toString()
-	{
-		String result = firstName + " " + lastName + " " + "\n" + "Home Address:\n" + homeAddress + "\n" + "School Address:\n" + schoolAddress;
-		return result;
-	}
+class Course {
+
 }
 
-public class Address
-{
-	private String streetAddress, city, province;
-	private long postalCode;
-	public Address(String street, String town, String prov, long post)
-	{
-		streetAddress = street;
-		city = town;
-		province = prov;
-		postalCode = post;
+public class School {
+	public static void main (String [] args) {
+	
 	}
-	public String toString()
-	{
-		String result = streetAddress + "\n" + city  + ", " + "\n" + province + " " + postalCode;
-                return result;
-	}
-
+}
 
